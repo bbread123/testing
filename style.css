@@ -1,0 +1,54 @@
+
+  .outer-div {
+    position:absolute;
+    top:0;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    display: none;
+
+    background-color: lightgray;
+    overflow: auto;
+  }
+
+  .scrollable-table {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right:5%;
+    overflow-y: auto;
+
+  }
+
+ .back-button{
+    position: absolute;
+    top: 0%;
+    left: 90%;
+  }
+
+  #next_month_button{
+    margin-left: 65%;
+    
+  }
+
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid black;
+    white-space: nowrap;
+  }
+
+  th {
+    background-color: lightblue;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+
+  
+

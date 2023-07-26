@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container col-sm-4 col-md-7 col-lg-4 mt-5" style="padding-right: 0px; padding-left: 0px;">
+    <button id="next_month_button" onclick="nextMonthClicked()">Next month</button>
+
+    <div class="card">
+        <h3 class="card-header" id="monthAndYear"></h3>
+        <table class="table table-bordered table-responsive-sm" id="calendar">
+            <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            </thead>
+
+            <tbody id="calendar-body">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="outer-div" id="outer-div">
+    <button class="back-button" 
+    onclick="back_button_clicked()">X</button>
+    <h1 id="day-hint">sdfs</h1>
+    <table class="scrollable-table"  >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Length</th>
+            <th>Day</th>
+            <th>Start</th>
+            <th>End</th>
+        </tr>
+        </thead>
+        <tbody id="table_Names">
+        </tbody>
+    </table>
+</div>
+
+       
+<script src="scripts.js"></script>
+
+
+
+</body>
+</html>
