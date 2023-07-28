@@ -4,7 +4,6 @@ outerDiv=document.getElementById("outer-div")
 dayHint=document.getElementById('day-hint')
 monthAndYear = document.getElementById("monthAndYear");
 nextMonthButton=document.getElementById('next_month_button');
-searchButton=document.getElementById("search-button");
 searchValue=document.getElementById("search-value");
 let firstDay = 0;
 daysInMonth=31;
@@ -164,7 +163,8 @@ function nextMonthClicked(){
 }
 
 
-searchButton.addEventListener("click",(ev)=>{
+
+function onSearchClicked(){
     console.log("searcsdfds")
     searchTerm=searchValue.value;
     results=[]
@@ -179,4 +179,3 @@ searchButton.addEventListener("click",(ev)=>{
         generateTable(results,-1,tableNode);
     }
     
-)
