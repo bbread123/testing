@@ -29,7 +29,7 @@
   }
 
   #next_month_button{
-    margin-left: 65%;
+    margin-left: 60%;
     
   }
 
@@ -49,6 +49,7 @@
     background-color: #f2f2f2;
   }
 
-
+form{
+  margin-left: 1%;
+}
   
-

@@ -4,7 +4,7 @@ outerDiv=document.getElementById("outer-div")
 dayHint=document.getElementById('day-hint')
 monthAndYear = document.getElementById("monthAndYear");
 nextMonthButton=document.getElementById('next_month_button');
-
+searchButton=document.getElementById("search-button");
 let firstDay = 0;
 daysInMonth=31;
 
@@ -51,7 +51,23 @@ cellClicked=function(event){
 }
 
 function generateTable(data,day,tableNode){
-    
+    if(day==-1){
+        removeChild(tableNode);
+        for(i=0;i<data.length;i++){
+            tr=document.createElement("tr")
+            for(var key in data[i]){
+                // console.log(data[i][key])
+                td=document.createElement("td");
+                textNode=document.createTextNode(data[i][key])
+                td.appendChild(textNode)
+                tr.appendChild(td)
+            }
+            tableNode.appendChild(tr)
+        }
+        
+        outerDiv.style.display='block';
+    }
+    else{
     for(i=0;i<data[day].length;i++){
         tr=document.createElement("tr")
         for(var key in data[day][i]){
@@ -64,6 +80,7 @@ function generateTable(data,day,tableNode){
         tableNode.appendChild(tr)
         //console.log(tableNode)
     }
+}
 }
 function removeChild(tableNode){
     while(tableNode.hasChildNodes()){
@@ -146,3 +163,19 @@ function nextMonthClicked(){
 }
 
 
+document.addEventListener("submit",(ev)=>{
+    ev.preventDefault()
+    searchTerm=ev.target.elements['search'].value;
+    results=[]
+    for(key in data){
+        for(innerKey in data[key]){
+           if(data[key][innerKey]["Name"].toUpperCase().includes(searchTerm.toUpperCase())){
+            results.push(data[key][innerKey])
+           }
+
+            }
+        }
+        generateTable(results,-1,tableNode);
+    }
+    
+)
