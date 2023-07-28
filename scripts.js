@@ -33,6 +33,21 @@ getData()
 
 
 
+function SearchClicked(){
+    // console.log("searcsdfds")
+    searchTerm=searchValue.value;
+    results=[]
+    for(key in data){
+        for(innerKey in data[key]){
+           if(data[key][innerKey]["Name"].toUpperCase().includes(searchTerm.toUpperCase())){
+            results.push(data[key][innerKey])
+           }
+
+            }
+        }
+        generateTable(results,-1,tableNode);
+    }
+    
 
 cellClicked=function(event){
     if(data){
@@ -164,18 +179,3 @@ function nextMonthClicked(){
 
 
 
-function onSearchClicked(){
-    console.log("searcsdfds")
-    searchTerm=searchValue.value;
-    results=[]
-    for(key in data){
-        for(innerKey in data[key]){
-           if(data[key][innerKey]["Name"].toUpperCase().includes(searchTerm.toUpperCase())){
-            results.push(data[key][innerKey])
-           }
-
-            }
-        }
-        generateTable(results,-1,tableNode);
-    }
-    
