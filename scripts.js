@@ -5,6 +5,7 @@ dayHint=document.getElementById('day-hint')
 monthAndYear = document.getElementById("monthAndYear");
 nextMonthButton=document.getElementById('next_month_button');
 searchButton=document.getElementById("search-button");
+searchValue=document.getElementById("search-value");
 let firstDay = 0;
 daysInMonth=31;
 
@@ -163,9 +164,9 @@ function nextMonthClicked(){
 }
 
 
-document.addEventListener("submit",(ev)=>{
-    ev.preventDefault()
-    searchTerm=ev.target.elements['search'].value;
+searchButton.addEventListener("click",(ev)=>{
+    console.log("searcsdfds")
+    searchTerm=searchValue.value;
     results=[]
     for(key in data){
         for(innerKey in data[key]){
