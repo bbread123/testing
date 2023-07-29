@@ -34,6 +34,7 @@ getData()
 
 
 function SearchClicked(){
+    dayHint.innerHTML= "Search Results";
     // console.log("searcsdfds")
     searchTerm=searchValue.value;
     results=[]
